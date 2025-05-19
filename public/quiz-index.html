@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="quiz-style.css">
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!--User Interface-->
+        <p>Spieler: <span id="userName"></span> | <span id="currentQuestion"></span>/<span id="questionAmount"></span></p>
+    
+        <!--Start Screen-->
+        <div id="start-screen">
+            <h2>Willkommen zum Quiz!</h2>
+            <p>Bitte mit der Wiesbaden-Mail-Adresse anmelden.</p>
+            <input type="text" id="userNameF" placeholder="Max" required>.
+            <input type="text" id="userNameL" placeholder="Musterman" required>@wiesbaden.de
+
+            <br><br>
+            <button onclick="startGame()">Spiel starten</button>
+        </div>
+
+        <!--Questions and Answers-->
+        <div class="question-container" id="quiz-container">
+
+            <div class="question-layout">
+
+                <div class="questionDiv" id="questionId"></div>
+                <div class="answerDiv" id="answersId"></div>
+
+            </div>
+
+            <button onclick="abortGame()" style="display: block; margin: 1rem auto;">Runde abbrechen</button>
+
+        </div>
+
+        <!--End Screen-->
+        <div class="leaderboard" id="leaderboard" display="none">
+            
+            <p style="font-size:60px">&#127881;</p>
+            
+            <h1>Erreichte Punkte:</h1>
+            <h1><span id="userScore"></span></h1>
+
+            <p>Eine Auflösung der Quizfragen und Antworten senden wir nach der Veranstaltung an:
+            <br>
+            <span id="userAdress" style="color:blue"></span></p>
+
+            <br>
+            <p>Bitte <span style="color:red">trenne noch die Verbindung zum Hotspot</span>, um den Slot wieder frei zu geben</p>
+
+            <p>Viele Grüße<br>euer CAFM-Team</p>
+
+        <!--
+            <table id="leaderboard-table" class="leadTable">
+                <thead>
+                <tr>
+                    <th>Runde</th>
+                    <th>Timestamp</th>
+                    <th>Spieler</th>
+                    <th>Punktzahl</th>
+                    <th>Status</th>
+                    <th>Antworten</th>
+                </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        -->
+
+            <!--<button onclick="downloadCSV()">Ergebnis speichern</button>-->
+            <button onclick="startOver()">Neues Spiel</button>
+        </div>
+
+</div>
+
+<script src="quiz-script.js" defer></script>
+
+</body>
+</html>
