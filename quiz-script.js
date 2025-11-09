@@ -21,7 +21,7 @@ function startGame() {
     gameRound.roundNumber = currentRound; //declaring the Round Number as Object Number in Array
 
     //Building ID
-    userId = gameRounds[currentRound].userNameF + "." + gameRounds[currentRound].userNameL + "@wimail.de"; //Building ID
+    userId = gameRounds[currentRound].userNameF + "." + gameRounds[currentRound].userNameL + "@wmeinemail.de"; //Building ID
     gameRounds[currentRound].userId = userId; //writing ID into Round
 
     document.getElementById('userName').textContent = gameRounds[currentRound].userId; //Display the ID
@@ -400,4 +400,5 @@ function nextQuestion() {
 
         endGame(); //..end the Game
     }
+
 }
